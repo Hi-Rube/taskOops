@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv=content-type content="text/html;charset=utf-8">
+    <title>node-mongodb-native</title>
+</head>
+<body style='font-family: "helvetica neue", helvetica, arial, sans-serif; color:#333333'>
+<style type='text/css'>
+    h1{
+        border-bottom: 2px solid #CCC;
+    }
+
+    pre{
+        width: 96%;
+        margin: 0px auto;
+        background-color: #f8f8f8;
+        padding: 10px;
+        border: 1px solid #ddd;
+        font-size: 13px;
+        line-height: 19px;
+        overflow: auto;
+        padding: 6px 10px;
+        border-radius: 3px;
+    }
+</style>
+    <div id='Content' style='width: 80%; margin: 0px auto'>
+        <h1>数据库</h1>
+        <p>要使数据库查询的第一件事就是打开一个数据库。这可以通过<b>DB</b>构造函数来进行。</p>
+        <pre>var mongodb = require("mongodb"),
+    mongoserver = new mongodb.Server(host, port, server_options),
+    db_connector = new mongodb.Db(name, mongoserver, db_options);
+
+db_connector.open(callback);</pre>
+
+        <ul>
+            <li><b>host</b>是服务端的名字或者IP</li>
+            <li><b>port</b>是MongoDB的端口,使用<b>mongodb.Connection.DEFAULT_PORT</b>为默认值（27017）</li>
+            <li><b>server_options</b>详见服务器选项</li>
+            <li><b>name</b>需要打开的数据库的名字,如果数据库不存在,数据库将被自动创建</li>
+            <li><b>db_options</b>详见数据库选项</li>
+        </ul>
+        <p></p>
+        <h1>服务器选项</h1>
+        <p>传递给<b>Server构造函数的参数项</b></p>
+        <ul>
+            <li><b>auto_reconnect</b>自动重新连接(默认为:false)</li>
+            <li><b>poolSize</b>指定连接池的容量(默认为:1)</li>
+            <li><b>socketOptions</b>详见套接字选项</li>
+        </ul>
+        <p></p>
+        <h1>套接字选项</h1>
+        <p>用于设置<b>socketOptions</b></p>
+        <ul>
+            <li><b>timeout</b>设置连接超时时间(默认为:0)</li>
+            <li><b>noDelay</b>禁用Nagle算法(默认为:true)</li>
+            <li><b>keepAlive</b>设置为0不保持连接,设置大于0为保持连接(默认为0)</li>
+            <li><b>encoding</b>编码:'ascii'|'utf8'|'base64'(默认为null)</li>
+        </ul>
+        <p></p>
+        <h1>数据库选项</h1>
+        <p>传递给<b>Db</b>构造函数的参数项</p>
+        <ul>
+            <li><b>native_parser</b>如果为true，则使用原生的BSON解析器</li>
+            <li><b>strict</b>如果为true,存在的集合无法进行诸如'recreated'等的操作</li>
+            <li><b>pk</b>自定义主键 _id 详见自定义主键</li>
+            <li><b>forceServerObjectId</b></li>
+        </ul>
+    </div>
+</body>
+</html>

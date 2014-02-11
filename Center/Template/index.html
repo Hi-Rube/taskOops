@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv=content-type content="text/html;charset=utf-8">
+    <title>taskOops!  ·  Work better,Happy together</title>
+
+</head>
+<body>
+<style type='text/css'>
+    body{
+        margin: 0px auto;
+    }
+
+    input:focus {
+        outline-width: 0;
+    }
+
+    .font-base{
+         font-family: "helvetica neue", helvetica, arial, sans-serif;
+    }
+
+    .div-base{
+        padding: 0;
+        border: 0;
+        margin: 0;
+    }
+
+    .a-1{
+        text-decoration: none;
+    }
+
+    #wrapper{
+        width: 1323px;
+        margin: 0px auto;
+        position: relative;
+        padding: 0;
+        border: 0;
+    }
+
+    #CEN{
+        width:80%;
+        margin: 0px auto;
+    }
+
+    #header{
+        width: 100%;
+        height: 100px;
+        padding: 0;
+        border: 0;
+    }
+
+    #logo{
+        font-size: 30px;
+        font-weight: bolder;
+        color: #333333;
+        letter-spacing: -2px;
+        position: relative;
+        top:25px;
+    }
+
+    #logo:hover{
+        color:#4A89DC;
+    }
+
+    #center-img{
+        width:100%;
+        height: 400px;
+        position: absolute;
+        top:100px;
+        left:0px;
+        z-index: -1;
+    }
+
+    #center-box{
+        position: relative;
+        width: 100%;
+        height: 400px;
+    }
+
+    #center-text{
+        letter-spacing: -2px;
+        font-weight:600;
+        font-size:70px;
+        color:#fff;
+        height: 200px;
+        position: relative;
+        top:100px;
+        float: left;
+        width: 60%;
+    }
+
+    #center-block{
+        float: right;
+        width: 40%;
+        height: 400px;
+        position: relative;
+    }
+
+    #sign-up{
+        margin-top: 60px;
+        margin-left: 20%;
+    }
+
+    #sign-up .sign-input{
+        margin-bottom: 20px;
+        height: 40px;
+    }
+
+    #sign-up .sign-input input{
+        width: 90%;
+        height: 30px;
+        border-radius: 10px 10px 10px 10px;
+        font-weight: 600;
+        color: #CCCCCC;
+        font-size: 16px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        background-color: #F5F7F0;
+        border-color:#ffffff;
+    }
+
+    #sign-up-submit{
+        width: 97%;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        font-weight: 900;
+        background-color:#5D9CEC;
+        border-radius: 10px 10px 10px 10px;
+        border: 6px solid #5D9CEC;
+        cursor: pointer;
+        font-size: 20px;
+        color:#ffffff;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    #sign-up-submit:hover{
+        background-color: #4A89DC;
+        border:6px solid #4A89DC;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.075),0 0 12px rgba(255,255,255,0.75);
+    }
+
+    #sign-up-submit:focus{
+        background-color: #4A89DC;
+        border:6px solid #4A89DC;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.075),0 0 12px rgba(255,255,255,0.75);
+    }
+
+    .sign-input-show{
+        box-shadow: 0 1px 2px rgba(0,0,0,0.075),0 0 12px rgba(255,255,255,0.75);
+    }
+
+</style>
+<div id='center-img'></div>
+    <div id='wrapper'>
+       <div id='CEN'>
+         <div id='header'>
+             <a href='/' class='a-1'><span id='logo' class='font-base'>taskOops!</span></a>
+         </div>
+         <div id='center-box'>
+             <div id='center-text' class='font-base div-base'><b>W</b>ork better,<br/>&nbsp;&nbsp;&nbsp;<b>H</b>appy together.</div>
+             <div id='center-block' class='div-base'>
+                 <div id='sign-up'>
+                          <div class='sign-input'><input title="Set a UserName" class='font-base sign-i' value='Set a UserName'/></div>
+                          <div class='sign-input'><input title='Your Email' class='font-base sign-i' value='Your Email'/></div>
+                          <div class='sign-input'><input title='Create a PassWord' class='font-base sign-i' value="Create a PassWord"/></div>
+                          <div><input value='注册 taskOops!' class='font-base' id='sign-up-submit' type="submit"/></div>
+                 </div>
+             </div>
+         </div>
+        </div>
+    </div>
+<script src="/js/public/jquery.min.js"></script>
+<script type="text/javascript">
+    window.onload=function(){
+        $('#center-img').css({'background':"url('/image/page/header-night.jpg')",'backgroundPosition':'0px -160px'});
+        $(".sign-i").keydown(function(){
+            if ($(this).val()==$(this).attr('title'))
+            $(this).val('');
+            $(this).css({'color':'#333333','font-weight':'900'});
+        });
+
+        $('.sign-i').focus(function(){
+            $(this).css({'background-color':'#ffffff'})
+            $(this).attr('class','font-base sign-i sign-input-show');
+        });
+
+        $(".sign-i").blur(function(){
+            if(!$(this).val()){
+                $(this).val($(this).attr("title")).css({'color':'#CCCCCC','font-weight':'600','backgroundColor':'#F5F7F0'});
+                $(this).attr('class','font-base sign-i');
+            } else {
+                $(this).css({'backgroundColor':'#F5F7F0'});
+                $(this).attr('class','font-base sign-i');
+            }
+        });
+
+    }
+</script>
+</body>
+</html>
