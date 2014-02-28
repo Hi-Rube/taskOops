@@ -4,12 +4,12 @@
     <list default="true" id="11fc106c-8789-4b82-a428-2a4e93171c85" name="Default" comment="" />
     <ignored path="team.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/test.html" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1391585151147" ignored="false" />
+    <file path="/test.html" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1393399182313" ignored="false" />
     <file path="/HREF.0.1.js" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1391010253724" ignored="false" />
     <file path="/app.js" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1392038504699" ignored="false" />
     <file path="/module.js" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1391067801097" ignored="false" />
     <file path="/http.js" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1391696410075" ignored="false" />
-    <file path="/config.js" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1391693134086" ignored="false" />
+    <file path="/config.js" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1393598660630" ignored="false" />
     <file path="/filePath.html" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1391682775650" ignored="false" />
     <file path="/dataGet.js" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1391692287157" ignored="false" />
     <file path="/dataDoc.html" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1391687106598" ignored="false" />
@@ -18,7 +18,7 @@
     <file path="/route.js" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1391759890143" ignored="false" />
     <file path="/cache.js" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1391748417765" ignored="false" />
     <file path="/globalvar.js" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1391750553727" ignored="false" />
-    <file path="/index.js" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1392026288403" ignored="false" />
+    <file path="/index.js" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1393602700756" ignored="false" />
     <file path="/outgoing.js" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1391760945714" ignored="false" />
     <file path="/control.js" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1391777272627" ignored="false" />
     <file path="/load.js" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1391780378749" ignored="false" />
@@ -26,9 +26,19 @@
     <file path="/ok.html" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1391847734351" ignored="false" />
     <file path="/ok.TST" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1391782120945" ignored="false" />
     <file path="/render.js" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1391841728017" ignored="false" />
-    <file path="/index.html" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1392016465929" ignored="false" />
+    <file path="/index.html" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1393602989413" ignored="false" />
     <file path="/dummy.xml" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1391849433234" ignored="false" />
     <file path="/node-mongodb-native.html" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1392037288741" ignored="false" />
+    <file path="/connection.js" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1393592738420" ignored="false" />
+    <file path="/entity.js" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1393598626468" ignored="false" />
+    <file path="/Schema.js" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1393395315901" ignored="false" />
+    <file path="/insert.js" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1393250688901" ignored="false" />
+    <file path="/delete.js" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1393253336817" ignored="false" />
+    <file path="/update.js" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1393573176489" ignored="false" />
+    <file path="/index.css" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1393438766962" ignored="false" />
+    <file path="/find.js" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1393591949926" ignored="false" />
+    <file path="/common.js" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1393597376263" ignored="false" />
+    <file path="/dbCom.js" changelist="11fc106c-8789-4b82-a428-2a4e93171c85" time="1393584224956" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,19 +58,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Center/Template/index.html">
+      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Center/Control/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="193" column="5" selection-start="4843" selection-end="4843" vertical-scroll-proportion="0.4357367">
+            <state line="20" column="51" selection-start="585" selection-end="585" vertical-scroll-proportion="0.55263156">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Center/Template/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="8" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0">
+            <state line="206" column="28" selection-start="4904" selection-end="4904" vertical-scroll-proportion="-8.0">
               <folding />
             </state>
           </provider>
@@ -76,30 +86,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Public/Static/test.html" />
-        <option value="$PROJECT_DIR$/Center/Template/ok.TST" />
-        <option value="$PROJECT_DIR$/Center/Module/Template/Com/load.js" />
-        <option value="$PROJECT_DIR$/Center/Module/Template/index.js" />
-        <option value="$PROJECT_DIR$/Center/Module/Control/index.js" />
-        <option value="$PROJECT_DIR$/Center/Module/Control/Com/templateCom.js" />
-        <option value="$PROJECT_DIR$/Center/Module/Template/Com/render.js" />
-        <option value="$PROJECT_DIR$/Center/Template/ok.html" />
-        <option value="$PROJECT_DIR$/Center/Control/index.js" />
-        <option value="$PROJECT_DIR$/Public/Static/js/public/jquery.min.js" />
-        <option value="$PROJECT_DIR$/Public/Static/js/public/jquery.js" />
-        <option value="$PROJECT_DIR$/Center/Module/Http/index.js" />
+        <option value="$PROJECT_DIR$/../../HTML5/IMAGE/index.html" />
+        <option value="$PROJECT_DIR$/../../HTML5/IMAGE/index.js" />
+        <option value="$PROJECT_DIR$/Center/Module/Db/Com/mongoDB/Com/update.js" />
+        <option value="$PROJECT_DIR$/Center/Module/Db/Com/mongoDB/Data/Schema.js" />
+        <option value="$PROJECT_DIR$/Center/Module/Db/Com/mongoDB/index.js" />
         <option value="$PROJECT_DIR$/Center/Module/Db/index.js" />
-        <option value="$PROJECT_DIR$/Center/Module/Db/Com/mongoDB/DOC/node-mongodb-native.html" />
-        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/Center/Module/Control/Com/dbCom.js" />
+        <option value="$PROJECT_DIR$/Center/Module/Control/index.js" />
+        <option value="$PROJECT_DIR$/Center/Module/Db/Com/mongoDB/Com/find.js" />
+        <option value="$PROJECT_DIR$/Center/Module/Db/Com/mongoDB/Data/mongoDb.log" />
+        <option value="$PROJECT_DIR$/Center/Module/Db/Com/mongoDB/Com/common.js" />
+        <option value="$PROJECT_DIR$/Center/Module/Db/Com/mongoDB/Com/connection.js" />
+        <option value="$PROJECT_DIR$/Center/Module/Db/Com/mongoDB/Com/entity.js" />
+        <option value="$PROJECT_DIR$/Center/Module/Db/Com/mongoDB/Data/config.js" />
+        <option value="$PROJECT_DIR$/Center/Control/index.js" />
         <option value="$PROJECT_DIR$/Center/Template/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="y" value="28" />
-    <option name="width" value="1325" />
-    <option name="height" value="741" />
+    <option name="x" value="2" />
+    <option name="y" value="34" />
+    <option name="width" value="1314" />
+    <option name="height" value="728" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -127,29 +137,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Problems" />
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="All">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="team">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -157,15 +144,9 @@
               <option name="myItemId" value="team" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="team" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="team" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -175,62 +156,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="team" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="team" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="team" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="team" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="team" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="image" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -284,56 +209,31 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Module" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Db" />
+              <option name="myItemId" value="Control" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="team" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="team" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Center" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Module" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mongoDB" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
+        </subPane>
+        <subPane subId="All">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="team" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="team" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Center" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            <PATH_ELEMENT USER_OBJECT="team">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -343,13 +243,13 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.lastSelected" value="preferences.general" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors" />
-    <property name="last_opened_file_path" value="$USER_HOME$/node_modules/socket.io" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../HTML5/IMAGE/index.html" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -442,22 +342,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="28" width="1325" height="741" extended-state="6" />
+    <frame x="2" y="34" width="1314" height="728" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18230769" sideWeight="0.638796" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23628049" sideWeight="0.6655738" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39833334" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36120403" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33442622" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39932886" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -526,96 +426,133 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.WebStorm6/system/extLibs/nodejs-v0.11.2-src/core-modules-sources/lib/events.js">
+    <entry file="file://$PROJECT_DIR$/Center/Module/Db/Com/mongoDB/Data/mongoDb.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="23" selection-start="3994" selection-end="3994" vertical-scroll-proportion="-0.023809524" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Static/js/public/HREF.0.1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Static/js/public/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="30620" selection-start="92598" selection-end="92598" vertical-scroll-proportion="0.06465517" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Center/Module/Db/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="14" selection-start="157" selection-end="157" vertical-scroll-proportion="0.04225352" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Center/Module/Db/Com/mongoDB/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Center/Module/Db/Com/mongoDB/DOC/node-mongodb-native.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="33" selection-start="1786" selection-end="1786" vertical-scroll-proportion="1.8539326" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="29" selection-start="65" selection-end="65" vertical-scroll-proportion="0.19189766" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Center/Module/Config/Com/dataGet.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Center/Module/Config/Data/filePath.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Center/Module/Http/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="8" selection-start="300" selection-end="300" vertical-scroll-proportion="0.3258427" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Center/Module/Template/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Center/Module/Template/Com/render.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/socket.io/node_modules/socket.io-client/node_modules/ws/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="35" selection-start="550" selection-end="550" vertical-scroll-proportion="0.28370786">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Static/index.html">
+    <entry file="file://$PROJECT_DIR$/Center/Module/Cache/Com/globalvar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="30" selection-start="67" selection-end="90" vertical-scroll-proportion="0.18072289">
-          <folding>
-            <marker date="1391003721598" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.065789476">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/Center/Module/Cache/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="8" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Center/Module/Http/Com/gb.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Center/Module/Http/Com/outgoing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.2631579">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Center/Module/Http/Com/route.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Center/Module/Http/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="33" selection-start="346" selection-end="346" vertical-scroll-proportion="0.47368422">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Center/Module/Template/Com/load.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Center/Module/Http/Com/control.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.23684211">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Center/Module/Template/Com/render.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.WebStorm6/system/extLibs/nodejs-v0.11.2-src/core-modules-sources/lib/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="8" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.118421055">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.WebStorm6/system/extLibs/nodejs-v0.11.2-src/core-modules-sources/lib/console.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="32" selection-start="1966" selection-end="1977" vertical-scroll-proportion="0.37105262">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Center/Template/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="193" column="5" selection-start="4843" selection-end="4843" vertical-scroll-proportion="0.4357367">
+        <state line="206" column="28" selection-start="4904" selection-end="4904" vertical-scroll-proportion="-8.0">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Center/Module/Control/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Center/Control/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="51" selection-start="585" selection-end="585" vertical-scroll-proportion="0.55263156">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
 

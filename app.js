@@ -6,7 +6,6 @@
  * To change this template use File | Settings | File Templates.
  */
 
-
 var config=require(process.cwd()+"/Center/Module/Config/");
 config.config(function(data){
     var filePath=JSON.parse(data[2]);

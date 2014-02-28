@@ -2,13 +2,16 @@
 <html>
 <head>
     <meta http-equiv=content-type content="text/html;charset=utf-8">
-    <title>taskOops!  ·  Work better,Happy together</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><%=lala%>taskOops!  ·  Work better,Happy together</title>
 
 </head>
 <body>
 <style type='text/css'>
     body{
         margin: 0px auto;
+        overflow-x: hidden;
+        background-color: #000;
     }
 
     input:focus {
@@ -16,7 +19,7 @@
     }
 
     .font-base{
-         font-family: "helvetica neue", helvetica, arial, sans-serif;
+        font-family: "helvetica neue", helvetica, arial, sans-serif;
     }
 
     .div-base{
@@ -30,7 +33,7 @@
     }
 
     #wrapper{
-        width: 1323px;
+        width: 100%;
         margin: 0px auto;
         position: relative;
         padding: 0;
@@ -49,6 +52,11 @@
         border: 0;
     }
 
+    #header-right{
+        float: right;
+        margin-top: 30px;
+    }
+
     #logo{
         font-size: 30px;
         font-weight: bolder;
@@ -62,11 +70,20 @@
         color:#4A89DC;
     }
 
-    #center-img{
+    #center-img-out{
         width:100%;
         height: 400px;
         position: absolute;
         top:100px;
+        left:0px;
+        overflow: hidden;
+    }
+
+    #center-img{
+        width:100%;
+        height: 400px;
+        position: absolute;
+        top:0px;
         left:0px;
         z-index: -1;
     }
@@ -111,6 +128,7 @@
         height: 30px;
         border-radius: 10px 10px 10px 10px;
         font-weight: 600;
+        border: 0;
         color: #CCCCCC;
         font-size: 16px;
         padding-left: 10px;
@@ -127,10 +145,11 @@
         padding-right: 20px;
         padding-bottom: 5px;
         padding-top: 5px;
+        border:0;
+        height: 40px;
         font-weight: 900;
         background-color:#5D9CEC;
         border-radius: 10px 10px 10px 10px;
-        border: 6px solid #5D9CEC;
         cursor: pointer;
         font-size: 20px;
         color:#ffffff;
@@ -140,13 +159,11 @@
 
     #sign-up-submit:hover{
         background-color: #4A89DC;
-        border:6px solid #4A89DC;
         box-shadow: 0 1px 2px rgba(0,0,0,0.075),0 0 12px rgba(255,255,255,0.75);
     }
 
     #sign-up-submit:focus{
         background-color: #4A89DC;
-        border:6px solid #4A89DC;
         box-shadow: 0 1px 2px rgba(0,0,0,0.075),0 0 12px rgba(255,255,255,0.75);
     }
 
@@ -154,33 +171,60 @@
         box-shadow: 0 1px 2px rgba(0,0,0,0.075),0 0 12px rgba(255,255,255,0.75);
     }
 
+    @media screen and (max-width:800px) {
+        #CEN{
+            width: 98%;
+        }
+    }
+
 </style>
-<div id='center-img'></div>
-    <div id='wrapper'>
-       <div id='CEN'>
-         <div id='header'>
-             <a href='/' class='a-1'><span id='logo' class='font-base'>taskOops!</span></a>
-         </div>
-         <div id='center-box'>
-             <div id='center-text' class='font-base div-base'><b>W</b>ork better,<br/>&nbsp;&nbsp;&nbsp;<b>H</b>appy together.</div>
-             <div id='center-block' class='div-base'>
-                 <div id='sign-up'>
-                          <div class='sign-input'><input title="Set a UserName" class='font-base sign-i' value='Set a UserName'/></div>
-                          <div class='sign-input'><input title='Your Email' class='font-base sign-i' value='Your Email'/></div>
-                          <div class='sign-input'><input title='Create a PassWord' class='font-base sign-i' value="Create a PassWord"/></div>
-                          <div><input value='注册 taskOops!' class='font-base' id='sign-up-submit' type="submit"/></div>
-                 </div>
-             </div>
-         </div>
+<div id='center-img-out'>
+    <div id='center-img'></div>
+</div>
+<div id='wrapper'>
+    <div id='CEN'>
+        <div id='header'>
+            <a href='/' class='a-1'><span id='logo' class='font-base'>taskOops!</span></a>
+            <div id='header-right'>sd</div>
         </div>
+        <div id='center-box'>
+            <div id='center-text' class='font-base div-base'><b>W</b>ork better,<br/>&nbsp;&nbsp;&nbsp;<b>H</b>appy together.</div>
+            <div id='center-block' class='div-base'>
+                <div id='sign-up'>
+                    <div class='sign-input'><input title="Set a UserName" class='font-base sign-i' value='Set a UserName'/></div>
+                    <div class='sign-input'><input title='Your Email' class='font-base sign-i' value='Your Email'/></div>
+                    <div class='sign-input'><input title='Create a PassWord' class='font-base sign-i' value="Create a PassWord"/></div>
+                    <div><input value='注册 taskOops!' class='font-base' id='sign-up-submit' type="submit"/></div>
+                </div>
+            </div>
+        </div>
+        <div style="height:1400px;">
+          <!--  <img src='http://www.webxml.com.cn/WebServices/ChinaStockWebService.asmx/getStockImageByCode?theStockCode=sh000001'>    -->
+        </div>
+
+        <form method='post' action='/index/test'>
+            <input name='name'/>
+            <input name='pwd'>
+            <input type='submit'>
+        </form>
     </div>
+</div>
 <script src="/js/public/jquery.min.js"></script>
 <script type="text/javascript">
     window.onload=function(){
-        $('#center-img').css({'background':"url('/image/page/header-night.jpg')",'backgroundPosition':'0px -160px'});
+        $('#center-img').css({'background':"url('/image/page/header-evening.jpg')",'backgroundPosition':'0px -160px'});
+        var Y=1;
+        var f=1
+        var t= setInterval(function(){
+            if (f==1) Y+=0.0005;
+            else Y-=0.0005;
+            if (Y>1.6) f=0; else if (Y<1.0005) f=1;
+            $('#center-img').css('transform','scale('+Y+','+Y+')');
+        },20);
+
         $(".sign-i").keydown(function(){
             if ($(this).val()==$(this).attr('title'))
-            $(this).val('');
+                $(this).val('');
             $(this).css({'color':'#333333','font-weight':'900'});
         });
 
