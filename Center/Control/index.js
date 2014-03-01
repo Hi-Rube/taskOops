@@ -11,45 +11,26 @@ if (typeof (Global.moduleFile)=='undefined'){
     var moduleFile=Global.moduleFile;
 }
 var control=require(process.cwd()+moduleFile+"/Control");
-var util=require('util');
-var querystring=require('querystring');
 
 exports.action = (function(){
     return {
         index:function(req,res){
             control.template.getTemplate('/index',function(data){
-                var a=[1,3,4];
-                var p=util.format(a);
-                data=control.template.render(data,[{key:'lala',value:p}]);
+                var a=new control.data.Assign;
+                //a.set('lala','dongyiwei');
+                //a.set('lala1','dongyiwei');
+                //a.set('lala2','dongyiwei');
+                //a.set('lala3','dongyiwei');
+                //a.set('lala4','dongyiwei');
+                data=control.template.render(data, a.get());
                 res.writeHead(200, {'Content-Type': 'text/html'});
                 res.write(data);
                 res.end();
             });
         },
         test:function(req,res){
-            var info ='';
-
-            req.addListener('data', function(chunk){
-
-                info += chunk;
-
-            })
-
-                .addListener('end', function(){
-
-                    info = querystring.parse(info);
-
-                    if(info.name == 'a' && info.pwd =='1'){
-
-                        res.end('login success ' + info.name);
-
-                    }else{
-
-                        res.end('login failed ' + info.name);
-
-                    }
-
-                })
+            var data=control.data.httpGET(req);
+            res.end(data.p);
         }
     }
 })();
