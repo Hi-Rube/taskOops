@@ -10,7 +10,7 @@
 })();
 
 function isExist(key){
-    eval("var obj=Global."+key);
+    var obj=Global[key];
     if (typeof(obj) == "undefined"){
         return false;
     }
@@ -18,5 +18,5 @@ function isExist(key){
 }
 
 exports.setGlobalVar=function(key,value){
-    eval("Global."+key+"=value");
+    Global[key]=value;
 }

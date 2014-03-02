@@ -1,13 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8"/>
     <title>Image</title>
 </head>
 <body>
-    <div id='CEN'>
-        <div id='header'></div>
-        <div id='content'></div>
-        <div id='footer'></div>
-    </div>
+<jd><%=jd%></jd>
+<style>
+    #b{
+        height:100px;
+        background-color: #00ffff;
+    }
+</style>
+<div id="b">
+    <script id="test" type="text/html">
+        <?JD for (i=1; i<=100; i++){?>
+              <h1><?JD= love.dong+'--'+love.dong?></h1>
+        <?JD }?>
+    </script>
+</div>
+<div>
+    <script id="tt" type="text/html">
+        <?JD for (j=1; j<=100; j++){?>
+        <h1><?JD= love.dong+"++"+love.dong?></h1>
+        <?JD }?>
+    </script>
+</div>
 </body>
+<script src='/js/public/jdata.min.js'></script>
+<script>
+    JData();
+</script>
 </html>

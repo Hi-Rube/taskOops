@@ -15,8 +15,10 @@ function doControl(parsedURL,req,res){
     }
 
     var route=parsedURL.pathname.split('/');
-    if (route.length>3)
+    if (route.length>3) {
         outgoing.outError(req,res);
+        return;
+    }
     if (route[1]==null || route[1]=='')
     var control='/index'; else var control='/'+route[1];
     if (route[2]==null || route[2]=='')

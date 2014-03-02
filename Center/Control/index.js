@@ -16,21 +16,22 @@ exports.action = (function(){
     return {
         index:function(req,res){
             control.template.getTemplate('/index',function(data){
-                var a=new control.data.Assign;
-                //a.set('lala','dongyiwei');
-                //a.set('lala1','dongyiwei');
-                //a.set('lala2','dongyiwei');
-                //a.set('lala3','dongyiwei');
-                //a.set('lala4','dongyiwei');
-                data=control.template.render(data, a.get());
                 res.writeHead(200, {'Content-Type': 'text/html'});
                 res.write(data);
                 res.end();
             });
         },
         test:function(req,res){
-            var data=control.data.httpGET(req);
-            res.end(data.p);
+            control.template.getTemplate('/test',function(data){
+                var a=new control.data.Assign();
+                a.set('dong',1);
+                a.set('yang',2);
+                a.set('love',{dong:'loveyan'});
+                data=control.template.render(data, a.get());
+                res.writeHead(200, {'Content-Type': 'text/html'});
+                res.write(data);
+                res.end();
+            });
         }
     }
 })();

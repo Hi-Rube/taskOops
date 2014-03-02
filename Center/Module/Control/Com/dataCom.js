@@ -16,3 +16,7 @@ exports.templateData=data.templateData;
 exports.Assign=data.Assign;
 exports.httpGET=data.httpGET;
 exports.httpPOST=data.httpPOST;
+exports.httpCOOKIE=data.httpCOOKIE;
+exports.setHttpGET=data.setHttpGET;
+exports.setHttpPOST=data.setHttpPOST;
+exports.setHttpCOOKIE=data.setHttpCOOKIE;

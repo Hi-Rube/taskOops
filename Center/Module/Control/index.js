@@ -24,6 +24,10 @@ exports.data=(function(){
         templateData:data.templateData,
         Assign:data.Assign,
         httpGET:data.httpGET,
-        httpPOST:data.httpPOST
+        httpPOST:data.httpPOST,
+        httpCOOKIE:data.httpCOOKIE,
+        setHttpGET:data.setHttpGET,
+        setHttpPOST:data.setHttpPOST,
+        setHttpCOOKIE:data.setHttpCOOKIE
     }
 })();

@@ -87,7 +87,7 @@ var $HREF=function(){
                 return o.currentStyle? o.currentStyle[key] : document.defaultView.getComputedStyle(o,null)[key];
             };
         })(),
-        creatEdit:(function(){                                                           //创建编辑器
+        creatEdit:(function(){                //创建编辑器  target目标ID method:按钮样式Chinese Button options:需要什么按钮
             return function(target,method,options){
                 (
                 function(){                                                             //初始化工具条

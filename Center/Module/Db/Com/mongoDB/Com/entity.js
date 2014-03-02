@@ -24,7 +24,7 @@ function newEntity(method,parse,opt){
     if (method==0) this.db=connection.connectionByParse(parse,opt);
         else this.db=connection.connectionByURI(parse,opt);
     for (var i=0; i<schema.schemaArray.length; i++)
-    eval("this."+schema.schemaArrayName[i]+"="+'new behavior(schema.schemaArrayName[i],schema.schemaArray[i],this.db)');
+    this[schema.schemaArrayName[i]]=new behavior(schema.schemaArrayName[i],schema.schemaArray[i],this.db);
     this.schemaArray=schema.schemaArray;
     this.schemaArrayName=schema.schemaArrayName;
 }
@@ -132,7 +132,7 @@ behavior.prototype.getModelCollection=function(){
 }
 
 behavior.prototype.setMethod=function(methodName,method){
-    eval("this.model.statics."+methodName+"=method");
+    this.model.statics[methodName]=method;
 }
 
 
