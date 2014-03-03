@@ -5,10 +5,10 @@
  * Time: 8:12 PM
  * To change this template use File | Settings | File Templates.
  */
-if (typeof (Global.moduleFile)=='undefined'){
+if (typeof (Global.filePath.moduleFile)=='undefined'){
     var moduleFile='/Center/Module';
 } else {
-    var moduleFile=Global.moduleFile;
+    var moduleFile=Global.filePath.moduleFile;
 }
 var control=require(process.cwd()+moduleFile+"/Control");
 
@@ -26,7 +26,7 @@ exports.action = (function(){
                 var a=new control.data.Assign();
                 a.set('dong',1);
                 a.set('yang',2);
-                a.set('love',{url:'http://hirube.duapp.com'});
+                a.set('love',{url:Global.filePath.moduleFile});
                 data=control.template.render(data, a.get());
                 res.writeHead(200, {'Content-Type': 'text/html'});
                 res.write(data);

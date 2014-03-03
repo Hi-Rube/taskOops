@@ -5,10 +5,10 @@
  * Time: 9:51 PM
  * To change this template use File | Settings | File Templates.
  */
-if (typeof (Global.moduleFile)=='undefined'){
+if (typeof (Global.filePath.moduleFile)=='undefined'){
     var moduleFile='/Center/Module';
 } else {
-    var moduleFile=Global.moduleFile;
+    var moduleFile=Global.filePath.moduleFile;
 }
 
 var Template=require(process.cwd()+moduleFile+"/Template");

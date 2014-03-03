@@ -1,7 +1,7 @@
-if (typeof (Global.moduleFile)=='undefined'){
+if (typeof (Global.filePath.moduleFile)=='undefined'){
     var moduleFile='/Center/Module';
 } else {
-    var moduleFile=Global.moduleFile;
+    var moduleFile=Global.filePath.moduleFile;
 }
 
 var Db=require(process.cwd()+moduleFile+"/Db");

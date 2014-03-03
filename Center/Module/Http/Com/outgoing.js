@@ -8,20 +8,20 @@
 var fs=require('fs');
 var gb=require("./gb.js");
 function outError(req,res){
-     if (typeof(Global.errorFile) == "undefined"){
+     if (typeof(Global.filePath.errorFile) == "undefined"){
          res.writeHead(404, {'Content-Type': 'text/html'});
          res.write("Error");
          res.end();
      } else {
-         if (gb.isText(Global.errorFile)==1){
-             fs.readFile(process.cwd()+Global.errorFile,'utf-8',function(err,data){
+         if (gb.isText(Global.filePath.errorFile)==1){
+             fs.readFile(process.cwd()+Global.filePath.errorFile,'utf-8',function(err,data){
                  res.writeHead(200, {'Content-Type': 'text/html'});
                  res.write(data);
                  res.end();
              });
-         } else if (gb.isText(Global.errorFile)==0){
-             fs.readFile(process.cwd()+Global.errorFile,function(err,data){
-                 res.writeHead(200, {'Content-Type': gb.getContentType(Global.errorFile)});
+         } else if (gb.isText(Global.filePath.errorFile)==0){
+             fs.readFile(process.cwd()+Global.filePath.errorFile,function(err,data){
+                 res.writeHead(200, {'Content-Type': gb.getContentType(Global.filePath.errorFile)});
                  res.write(data);
                  res.end();
              });
@@ -30,11 +30,11 @@ function outError(req,res){
 }
 
 function outData(pathName,req,res){
-    if (typeof (Global.staticFile)=="undefined")
+    if (typeof (Global.filePath.staticFile)=="undefined")
     {
         var staticFile="/Public/Static";
     }  else {
-        var staticFile=Global.staticFile;
+        var staticFile=Global.filePath.staticFile;
     }
     if (gb.isText(pathName)==1){
         fs.readFile(process.cwd()+staticFile+pathName,"utf-8",function(err,data){

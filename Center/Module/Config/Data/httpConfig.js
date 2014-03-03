@@ -1,8 +1,9 @@
 /**
  * Created with JetBrains WebStorm.
  * User: rube
- * Date: 2/6/14
- * Time: 5:11 PM
+ * Date: 3/3/14
+ * Time: 11:08 PM
  * To change this template use File | Settings | File Templates.
  */
-var dataGet=require("./Com/dataGet.js");
+var data={port:1024};
+exports.data=data;

@@ -626,7 +626,7 @@
              // 删除页面数据
              // TODO:name 需要改进浏览器兼容问题, remove方法在<IE 8 的问题
              document.getElementsByTagName(Tag)[0].innerHTML='';
-             document.getElementsByTagName(Tag)[0].remove();
+            // document.getElementsByTagName(Tag)[0].remove();            //IE不支持
           }
 
           JData.onerror=function(e){

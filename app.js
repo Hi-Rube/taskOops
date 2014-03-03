@@ -7,13 +7,9 @@
  */
 
 var config=require(process.cwd()+"/Center/Module/Config/");
-config.config(function(data){
-    var filePath=JSON.parse(data[2]);
-    var http=require(process.cwd()+filePath.moduleFile+"/Http/");
-    var cache=require(process.cwd()+filePath.moduleFile+"/Cache/");
-    cache.globalvar.setGlobalVar("errorFile",'/Public/Static/4.png');
-    http.doCreat();
-});
+var taskOops=require(process.cwd()+Global.filePath.moduleFile+"/Http/");
+taskOops.Run();
+
 
 
 

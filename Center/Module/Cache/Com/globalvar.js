@@ -6,7 +6,18 @@
  * To change this template use File | Settings | File Templates.
  */
 (function(){
-    Global=new Object();
+    G=function(){};
+    Global=new G;
+    G.prototype.isExit=function(key){
+        var obj=this[key];
+        if (typeof(obj) == "undefined"){
+            return false;
+        }
+        return true;
+    }
+    G.prototype.set=function(key,value){
+        this[key]=value;
+    }
 })();
 
 function isExist(key){

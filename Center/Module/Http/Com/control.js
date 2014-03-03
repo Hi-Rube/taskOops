@@ -8,10 +8,10 @@
 var outgoing=require("./outgoing.js");
 var fs=require('fs');
 function doControl(parsedURL,req,res){
-    if (typeof (Global.controlFile)=="undefined"){
+    if (typeof (Global.filePath.controlFile)=="undefined"){
         var controlFile="/Center/Control";
     }  else {
-        var controlFile=Global.controlFile;
+        var controlFile=Global.filePath.controlFile;
     }
 
     var route=parsedURL.pathname.split('/');
@@ -28,7 +28,7 @@ function doControl(parsedURL,req,res){
     fs.exists(cFile,function(exists){
         if (exists){
             var collection= require(cFile);
-            var obj=eval('collection.action.'+action);
+            var obj=collection.action[action];
             if (typeof (obj)=='undefined'){
                 outgoing.outError(req,res);
             } else {
