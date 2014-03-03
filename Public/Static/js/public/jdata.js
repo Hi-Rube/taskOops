@@ -590,6 +590,27 @@
 
 //JData
 (function(global){
+    //对象深拷贝
+    Object.prototype.Clone = function(){
+        var objClone;
+        if (this.constructor == Object){
+            objClone = new this.constructor();
+        }else{
+            objClone = new this.constructor(this.valueOf());
+        }
+        for(var key in this){
+            if ( objClone[key] != this[key] ){
+                if ( typeof(this[key]) == 'object' ){
+                    objClone[key] = this[key].Clone();
+                }else{
+                    objClone[key] = this[key];
+                }
+            }
+        }
+        objClone.toString = this.toString;
+        objClone.valueOf = this.valueOf;
+        return objClone;
+    }
       var JData=function(Tag){
                if (Tag==null) {
                    return JData['run'].apply(JData,['jd']);
@@ -600,7 +621,10 @@
       }
 
           JData.run=function(Tag){
-             getData(Tag);
+             renderData(0,Tag);
+
+             // 删除页面数据
+             // TODO:name 需要改进浏览器兼容问题, remove方法在<IE 8 的问题
              document.getElementsByTagName(Tag)[0].innerHTML='';
              document.getElementsByTagName(Tag)[0].remove();
           }
@@ -609,19 +633,74 @@
               console.error(e);
           }
 
-          function getData(Tag){
+          JData.refreshAll=function(method,data,fun){
+              if (data==null) data=undefined;
+              renderData(0,data,method,fun);
+          }
+
+          JData.refreshPart=function(ID,method,data,fun){
+              if (data==null) data=undefined;
+              renderData(1,data,method,fun,ID);
+          }
+
+          JData.getData=function(){
+              return this.data.Clone();
+          }
+
+          //Tag初次加载为标签名,刷新时为空或数据对象
+          function renderData(part,Tag,method,fun,scriptID){
+              //数据获取
+              if (typeof Tag==='string'){
+              //页面加载时数据获取
               var data=document.getElementsByTagName(Tag)[0].innerHTML;
               data=eval('('+data+')');
+              JData.data=data;
+              } else if (typeof Tag==='object'){
+              //带入参数,修改JData.data的数据刷新
+                  var data=Tag;
+                  if (part==0)
+                  global.JData.data=data;
+              } else if (typeof Tag=='undefined'){
+              //外部修改JData.data时的数据刷新
+                  var data=global.JData.data;
+              }
+              //数据渲染
+              render(Tag,data,method,part,scriptID);
+              //回调函数
+              if (typeof fun!='undefined'){
+                   fun();
+              }
+          }
+
+          //part==0全局渲染 part==1 局部渲染
+          function render(Tag,data,method,part,scriptID){
               var scriptTag=document.getElementsByTagName('script');
-              for (var i=scriptTag.length-1; i>=0; i--){
-                  var doNow=i;
-                  if (scriptTag[doNow].getAttribute('type')=='text/html' || scriptTag[doNow].getAttribute('typeName')=='text/html' || scriptTag[doNow].getAttribute('TYPE')=='text/html'){
-                        var id=scriptTag[doNow].id;
-                        var html=global.template.render(id,data);
-                        scriptTag[doNow].parentNode.innerHTML=html;
+              for (var i=scriptTag.length-1; i>=0; i--)
+              if (part==0||(part==1 && scriptTag[i].id==scriptID)){
+                  var nNode=scriptTag[i];
+                  var pNode=nNode.parentNode;
+                  //判断模板
+                  //TODO:name 需要增加模板错误验证机制,需要改进getAttribute 在 <IE8 情况下的问题
+                  if (nNode.getAttribute('type')=='text/html'||nNode.getAttribute('typeName')=='text/html'||nNode.getAttribute('TYPE')=='text/html'){
+                      var id=nNode.id;
+                      var html=global.template.render(id,data);
+                      if (typeof Tag=='string') {
+                          pNode.innerHTML+=html;
+                      } else {
+                          if (method==0 || method=='replace'){
+                              pNode.innerHTML=html;
+                              //TODO:name 修改兼容性问题 <IE 8
+                              pNode.appendChild(nNode);
+                          }  else if (method==-1 || method=='before'){
+                              pNode.innerHTML=html+pNode.innerHTML;
+                          }  else pNode.innerHTML+=html;
+                      }
                   }
+                  if (part==1) break;
               }
           }
 
     global.JData=JData;
 })(this);
+
+//TODO:name 代码优化,文件大小缩减

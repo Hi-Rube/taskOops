@@ -8,27 +8,33 @@
 <jd><%=jd%></jd>
 <style>
     #b{
-        height:100px;
+        height:50px;
         background-color: #00ffff;
     }
 </style>
 <div id="b">
     <script id="test" type="text/html">
-        <?JD for (i=1; i<=100; i++){?>
-              <h1><?JD= love.dong+'--'+love.dong?></h1>
+        <?JD for (i=1; i<=1; i++){?>
+           <a href=<?JD=love.url?>><?JD= love.url?></a>  </br>
         <?JD }?>
     </script>
 </div>
 <div>
-    <script id="tt" type="text/html">
-        <?JD for (j=1; j<=100; j++){?>
-        <h1><?JD= love.dong+"++"+love.dong?></h1>
+    <script id="t" type="text/html">
+        <?JD for (i=1; i<=1; i++){?>
+        <a href=<?JD=love.url?>><?JD= love.url?></a>  </br>
         <?JD }?>
     </script>
 </div>
 </body>
-<script src='/js/public/jdata.min.js'></script>
+<script src='/js/public/jdata.js'></script>
 <script>
     JData();
+    setInterval(function(){
+        var da=JData.getData();
+        da.love.url=new Date().toLocaleTimeString();
+        JData.refreshPart('t',0,da);
+        alert(JData.data.love.url)
+    },1000);
 </script>
 </html>

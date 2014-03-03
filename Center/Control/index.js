@@ -26,7 +26,7 @@ exports.action = (function(){
                 var a=new control.data.Assign();
                 a.set('dong',1);
                 a.set('yang',2);
-                a.set('love',{dong:'loveyan'});
+                a.set('love',{url:'http://hirube.duapp.com'});
                 data=control.template.render(data, a.get());
                 res.writeHead(200, {'Content-Type': 'text/html'});
                 res.write(data);
