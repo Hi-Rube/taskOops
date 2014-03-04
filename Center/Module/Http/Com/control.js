@@ -7,6 +7,12 @@
  */
 var outgoing=require("./outgoing.js");
 var fs=require('fs');
+var domain = require('domain');
+//应用程序错误捕获
+var catchError=domain.create();
+catchError.on('error', function(e) {
+    console.log("applicationException-->"+ e.stack+'--'+new Date().toLocaleDateString()+'-'+new Date().toLocaleTimeString());
+});
 function doControl(parsedURL,req,res){
     if (typeof (Global.filePath.controlFile)=="undefined"){
         var controlFile="/Center/Control";
@@ -28,12 +34,18 @@ function doControl(parsedURL,req,res){
     fs.exists(cFile,function(exists){
         if (exists){
             var collection= require(cFile);
-            var obj=collection.action[action];
-            if (typeof (obj)=='undefined'){
-                outgoing.outError(req,res);
-            } else {
-                obj(req,res);
-            }
+            //应用执行异常抓取
+             try{
+                var obj=collection.action[action];
+
+                if (typeof (obj)=='undefined'){
+                    outgoing.outError(req,res);
+                } else {
+                    catchError.run(obj(req,res));
+                }
+             }catch (e){
+               //console.log('applicationException-->'+ e.stack+'--'+new Date().toLocaleDateString()+'-'+new Date().toLocaleTimeString());
+           }
         } else {
             outgoing.outError(req,res);
         }

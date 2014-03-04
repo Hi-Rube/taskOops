@@ -7,6 +7,7 @@
  */
 var querystring=require('querystring');
 var URL=require('url');
+var util=require('util');
 
 /***
  * 获取GET请求参数
@@ -16,6 +17,9 @@ var URL=require('url');
  */
 function GET(req){
     var info = URL.parse(req.url,true).query;
+    for (var i in info){
+        info[i]=util.format('%j',info[i]);
+    }
     return info;
 }
 
@@ -33,6 +37,9 @@ function POST(req,fun){
 
     req.addListener('end', function(){
         info = querystring.parse(info);
+        for (var i in info){
+            info[i]=util.format('%j',info[i]);
+        }
         fun(info);
     })
 }

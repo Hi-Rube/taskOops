@@ -619,10 +619,13 @@
                }  else return JData['onerror'].apply(JData,["Don't have <"+Tag+"> "+"Tag. Please put JS after </body>"]);
 
       }
+          //pageTransform 的过渡函数
+          JData.TF=function(){};
 
           JData.run=function(Tag){
              renderData(0,Tag);
-
+             //所有带ad属性a标签页面跳转,过渡设置和预加载
+             pageTransform(global.JData.TF);
              // 删除页面数据
              // TODO:name 需要改进浏览器兼容问题, remove方法在<IE 8 的问题
              document.getElementsByTagName(Tag)[0].innerHTML='';
@@ -633,18 +636,37 @@
               console.error(e);
           }
 
+          //全局渲染
           JData.refreshAll=function(method,data,fun){
               if (data==null) data=undefined;
               renderData(0,data,method,fun);
           }
-
+          //局部渲染
           JData.refreshPart=function(ID,method,data,fun){
               if (data==null) data=undefined;
               renderData(1,data,method,fun,ID);
           }
 
+          //数据深拷贝获取
           JData.getData=function(){
               return this.data.Clone();
+          }
+
+          //通过ajax获取数据
+          JData.getAjaxData=function(options,beforeFun,afterFun){
+              if (typeof options.async=='undefined') {
+                  options.async=false;
+              }
+
+              if (typeof options.type=='undefined'){
+                  options.type='json';
+              }
+              if (options.type=='jsonp'){
+                  getAjaxDataByjsonp(options,beforeFun,afterFun);
+              }  else if (options.type=='script'){
+                  getAjaxDataByscript(options,beforeFun,afterFun);
+              }  else
+              getAjaxData(options,beforeFun,afterFun);
           }
 
           //Tag初次加载为标签名,刷新时为空或数据对象
@@ -699,6 +721,118 @@
                   if (part==1) break;
               }
           }
+
+          function pageTransform(TF){
+               var aTag=document.getElementsByTagName('a');
+               for (var i=0; i< aTag.length; i++){
+                   if (aTag[i].getAttribute('ad')!=null||aTag[i].getAttribute('adName')!=null||aTag[i].getAttribute('AD')!=null){
+                       if (aTag[i].attachEvent){
+                           aTag[i].attachEvent("onclick", function(){
+                              TF();
+                              iframeDataGet(this);
+                           });
+                       } else {
+                           aTag[i].addEventListener('click',function(){
+                               TF();
+                              iframeDataGet(this)
+                           });
+                       }
+                   }
+               }
+
+              function iframeDataGet(F){
+                  var newIframe=document.createElement('iframe');
+                  var src='#';
+                  if (F.getAttribute('ad')!=null) src=F.getAttribute('ad');
+                  if (F.getAttribute('adName')!=null) src=F.getAttribute('adName');
+                  if (F.getAttribute('AD')!=null) src=F.getAttribute('AD');
+                  newIframe.src=src;
+                  newIframe.style.display='none';
+                  if (newIframe.attachEvent){
+                      newIframe.attachEvent("onload", function(){
+                          iframeLoad(this);
+                      });
+                  } else {
+                      newIframe.addEventListener('load',function(){
+                          iframeLoad(this);
+                      });
+                  }
+                  document.body.appendChild(newIframe);
+              }
+
+              //内容加载和跳转
+              //TODO:name 增加点对点加载机制
+              function iframeLoad(F){
+                  window.location= F.src;
+              }
+          }
+
+          //jsonp的形式请求调用,afterFun 为回调函数名(一个字符串)
+          function getAjaxDataByjsonp(options,beforeFun,afterFun){
+              beforeFun();
+              var url = options.url+'?'+options.parse+'&callback='+afterFun;
+              var script = document.createElement('script');
+              script.setAttribute('src', url);
+              document.getElementsByTagName('head')[0].appendChild(script);
+          }
+
+          //直接加载js文件的形式改变当前作用域的数据情况
+          function getAjaxDataByscript(options,beforeFun,afterFun){
+              beforeFun();
+              var url = options.url+'?'+options.parse;
+              var script = document.createElement('script');
+              script.setAttribute('src', url);
+              if (script.attachEvent){
+                  script.attachEvent("onload", function(){
+                      afterFun();
+                  });
+              } else {
+                  script.addEventListener('load',function(){
+                      afterFun();
+                  });
+              }
+              document.getElementsByTagName('head')[0].appendChild(script);
+          }
+
+          function getAjaxData(options,beforeFun,afterFun){
+              beforeFun();
+              if (window.XMLHttpRequest)
+              {// code for IE7+, Firefox, Chrome, Opera, Safari
+                  xmlhttp=new XMLHttpRequest();
+              }
+              else
+              {// code for IE6, IE5
+                  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+              }
+              xmlhttp.onreadystatechange=function()
+              {
+                  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                  {
+                      try{
+                      if (options.type=='json'){
+                          var content=eval("("+xmlhttp.responseText+")");
+                      } else if (options.type=='text') {
+                          var content=xmlhttp.responseText;
+                      } else content='请求格式错误';
+                      afterFun(false,content);
+                      } catch(e){
+                          afterFun('服务端数据JSON格式错误!',null);
+                      }
+
+                  }  else if (xmlhttp.status==404){
+                      afterFun('请求页面不存在!',null);
+                  }
+              }
+              if (options.method=='POST'){
+              xmlhttp.open(options.method,options.url,options.async);
+              xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+              xmlhttp.send(options.parse);
+              } else if (options.method=='GET'){
+                  xmlhttp.open(options.method,options.url+'?'+options.parse,options.async);
+                  xmlhttp.send();
+              }  else afterFun('请求方式错误!',null)
+          }
+
 
     global.JData=JData;
 })(this);

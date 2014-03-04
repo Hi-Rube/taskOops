@@ -9,12 +9,20 @@ var http=require('http');
 var route=require("./route.js");
 var cluster=require('cluster');
 var numCPUs=require('os').cpus().length;
+var cp=require('child_process');
 if (typeof Global.httpConfig.port=='undefined'){
    var port=3000;
 }  else {
     var port=Global.httpConfig.port;
 }
 exports.doCreat=function(){
+    /***
+     * 异常捕获做后一道关卡
+     */
+    process.on('uncaughtException',function(err){
+        console.log('uncaughtException-->'+err.stack+'--'+new Date().toLocaleDateString()+'-'+new Date().toLocaleTimeString());
+        process.exit();
+    });
     if (cluster.isMaster){
         for (var i=0; i<numCPUs; i++){
             cluster.fork();

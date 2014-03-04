@@ -9,32 +9,32 @@
 <style>
     #b{
         height:50px;
-        background-color: #00ffff;
     }
 </style>
+
 <div id="b">
     <script id="test" type="text/html">
         <?JD for (i=1; i<=1; i++){?>
-           <a href=<?JD=love.url?>><?JD= love.url?></a>  </br>
+           <a ad=<?JD=love.url?>><?JD= dong?></a>  </br>
         <?JD }?>
     </script>
 </div>
 <div>
     <script id="t" type="text/html">
         <?JD for (i=1; i<=1; i++){?>
-        <a href=<?JD=love.url?>><?JD= love.url?></a>  </br>
+        <a ad=<?JD=love.url?>><?JD= love.url?></a>  </br>
         <?JD }?>
     </script>
 </div>
 </body>
 <script src='/js/public/jdata.js'></script>
 <script>
+    JData.TF=function(){
+    }
     JData();
-    setInterval(function(){
-        var da=JData.getData();
-        da.love.url=new Date().toLocaleTimeString();
-        JData.refreshPart('t',0,da);
-        //JData.refreshPart('test',0,da);
-    },1000);
+    ok=function(data){
+        alert(data.qq);
+    }
+    JData.getAjaxData({url:'/index',parse:"a=dd",type:'text',method:'POST'},function(){},function(err,data){alert(data)});
 </script>
 </html>
