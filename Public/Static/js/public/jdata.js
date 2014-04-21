@@ -29,8 +29,8 @@
 
 
     template.version = '2.0.4';
-    template.openTag = '<?JD';     // 设置逻辑语法开始标签
-    template.closeTag = '?>';    // 设置逻辑语法结束标签
+    template.openTag = '<%JD';     // 设置逻辑语法开始标签
+    template.closeTag = '%>';    // 设置逻辑语法结束标签
     template.isEscape = true;    // HTML字符编码输出开关
     template.isCompress = false; // 剔除渲染后HTML多余的空白开关
     template.parser = null;      // 自定义语法插件接口
